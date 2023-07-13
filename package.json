@@ -9,5 +9,19 @@
   "devDependencies": {
     "vite": "latest",
     "vite-plugin-solid": "latest"
-  }
+  },
+  "name": "rune-picker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theCryingMan/GoD-Rune-Picker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theCryingMan/GoD-Rune-Picker/issues"
+  },
+  "homepage": "https://github.com/theCryingMan/GoD-Rune-Picker#readme",
+  "description": ""
 }
