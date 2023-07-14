@@ -69,16 +69,14 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 50% 50%;
 }
-<<<<<<< Updated upstream
 .landscape .rune-image {
   height: 100%;
-=======
+}
 .landscape .rune-button {
   height: 100%;
 }
 .landscape .picked-row .rune-button {
   height: 30%;
->>>>>>> Stashed changes
 }
 .landscape .map-display {
   margin: 0 auto;
