@@ -48,7 +48,7 @@ body {
   grid-template-rows: 50% 50%;
 }
 .landscape .rune-image {
-  height: 30%;
+  height: 100%;
 }
 .landscape .map-display {
   margin: 0 auto;
