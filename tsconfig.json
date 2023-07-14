@@ -7,16 +7,10 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "allowJs": true,
-    "lib": [
-      "es6",
-      "dom"
-    ],
+    "lib": ["es6", "ESNext", "dom"],
     "rootDir": "src",
     "moduleResolution": "node",
     "jsxImportSource": "solid-js",
-    "types": [
-      "solid-js",
-      "solid-js/dom"
-    ]
+    "types": ["solid-js", "solid-js/dom"]
   }
 }

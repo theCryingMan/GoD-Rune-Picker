@@ -4,7 +4,8 @@
     "build": "vite build"
   },
   "dependencies": {
-    "solid-js": "latest"
+    "solid-js": "latest",
+    "vite-plugin-solid-svg": "^0.6.3"
   },
   "devDependencies": {
     "vite": "latest",
