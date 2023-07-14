@@ -8,10 +8,36 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-.portrait #app {
-  height: 100%;
-  width: 100%;
+.landscape #app {
+  height: clamp(100svh, 100dvh, 100lvh);
+  width: 100dvw;
 }
+.portrait #app {
+  height: clamp(100svh, 100dvh, 100lvh);
+  width: 100dvw;
+}
+.settings-icon:focus-within {
+  background-color: brown;
+}
+.settings-icon {
+  min-height: 0;
+  min-width: 0;
+  font-size: 3em;
+  border: 1px solid grey;
+  color: darkgrey;
+  width: 100%;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+
+.rune-custom-name {
+  font-size: xx-large;
+  text-align: center;
+  color: silver;
+  margin-bottom: 1rem;
+}
+
 .portrait .rune-picker {
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
@@ -34,12 +60,8 @@ body {
   box-sizing: border-box;
   place-items: space-evenly;
 }
-.portrait .rune-image {
+.portrait .rune-button {
   height: 100%;
-  width: 100%;
-}
-.landscape #app {
-  height: 100dvh;
   width: 100%;
 }
 
@@ -47,8 +69,16 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 50% 50%;
 }
+<<<<<<< Updated upstream
 .landscape .rune-image {
   height: 100%;
+=======
+.landscape .rune-button {
+  height: 100%;
+}
+.landscape .picked-row .rune-button {
+  height: 30%;
+>>>>>>> Stashed changes
 }
 .landscape .map-display {
   margin: 0 auto;
@@ -80,11 +110,27 @@ body {
   gap: 2%;
   place-items: center;
 }
-.rune-image[data-selected="true"] {
+.portrait .picker-wrapper {
+  transition: 200ms all;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  place-items: center;
+}
+.landscape .picker-wrapper {
+  transition: 200ms all;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  place-items: center;
+}
+.rune-button[data-selected="true"] {
   background-color: darkolivegreen;
 }
 
-.rune-image {
+.rune-button {
   min-width: 0;
   width: 100%;
   box-sizing: border-box;
@@ -96,13 +142,13 @@ body {
   place-content: center;
   place-items: center;
 }
-.rune-image img {
+.rune-button img {
   display: block;
   max-width: 80%;
   pointer-events: none;
   filter: brightness(300%);
 }
-.picked-row .rune-image img {
+.picked-row .rune-button img {
   pointer-events: none;
   filter: brightness(300%);
   min-width: 0;
@@ -123,15 +169,3 @@ body {
   height: 100%;
   width: 100%;
 }
-/* @media (aspect-ratio > 1) {
-  .rune-picker {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-}
-@media (orientation: landscape) {
-  #app {
-    width: 100%;
-    height: 100%;
-  }
-} */
