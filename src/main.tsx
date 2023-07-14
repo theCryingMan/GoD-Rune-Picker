@@ -17,41 +17,48 @@ const [Runes, setRunes] = createStore([
     selected: false,
     url: division,
     name: "division",
-    customName: "test",
+    customName: "",
   },
   {
     selected: false,
     url: ex,
+    customName: "",
     name: "ex",
   },
   {
     selected: false,
     url: hamburger,
+    customName: "",
     name: "hamburger",
   },
   {
     selected: false,
     url: pizza,
+    customName: "",
     name: "pizza",
   },
   {
     selected: false,
     url: squid,
+    customName: "",
     name: "squid",
   },
   {
     selected: false,
     url: table,
+    customName: "",
     name: "table",
   },
   {
     selected: false,
     url: three,
+    customName: "",
     name: "three",
   },
   {
     selected: false,
     url: vig,
+    customName: "",
     name: "vig",
   },
 ]);
@@ -76,7 +83,9 @@ function Picker() {
     <div class="picker-wrapper">
       <div class={"settings-icon"}>⚙</div>
       <div class={"rune-picker"}>
-        <Index each={Runes}>{(rune, idx) => <RuneDiplay setRunes={setRunes} rune={rune} />}</Index>
+        <Index each={Runes}>
+          {(rune, idx) => <RuneDiplay setRunes={setRunes} rune={rune} />}
+        </Index>
       </div>
     </div>
   );
