@@ -1,22 +1,20 @@
 import { Show } from "solid-js";
-
-export function RuneDiplay(props: { rune: any; setRunes: any }) {
+import { useRuneContext } from "./Context/RuneContext";
+export function RuneDiplay(props: { id: Rune["id"] | number }) {
+  const [state, { setCustomName, selectRune, getRune }] = useRuneContext();
+  const rune = getRune(props.id);
   return (
     <button
       class="rune-button"
-      data-selected={props.rune().selected}
-      data-name={props.rune().name}
+      data-selected={rune.selected}
+      data-id={rune.id}
       onPointerUp={(event) => {
-        props.setRunes(
-          (r) => r.name === props.rune().name,
-          "selected",
-          (s) => !s
-        );
+        selectRune(rune.id);
       }}
     >
-      <img src={props.rune().url} />
-      <Show when={props.rune().customName}>
-        <span class={'rune-custom-name'}>{props.rune().customName}</span>
+      <img src={rune.url} />
+      <Show when={rune.customName}>
+        <span class={"rune-custom-name"}>{rune.customName}</span>
       </Show>
     </button>
   );

@@ -11,6 +11,6 @@
     "rootDir": "src",
     "moduleResolution": "node",
     "jsxImportSource": "solid-js",
-    "types": ["solid-js", "solid-js/dom"]
+    "types": ["solid-js", "solid-js/dom", "vite"]
   }
 }
